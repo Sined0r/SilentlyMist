@@ -17,7 +17,7 @@ public class FillFromMicrophone : MonoBehaviour
 
     public GameObject screamText;
 
-    public static UnityAction OnScreamDetected;
+    public UnityEvent OnScreamDetected;
 
     private void Start()
     {

@@ -6,6 +6,8 @@ public class FirstPersonAudio : MonoBehaviour
     public FirstPersonMovement character;
     public GroundCheck groundCheck;
 
+    public ScreamSphere ScreamSphere;
+
     [Header("Step")]
     public AudioSource stepAudio;
     public AudioSource runningAudio;
@@ -71,14 +73,17 @@ public class FirstPersonAudio : MonoBehaviour
             if (crouch && crouch.IsCrouched)
             {
                 SetPlayingMovingAudio(crouchedAudio);
+                ScreamSphere.Cast();
             }
             else if (character.IsRunning)
             {
                 SetPlayingMovingAudio(runningAudio);
+                ScreamSphere.Cast();
             }
             else
             {
                 SetPlayingMovingAudio(stepAudio);
+                ScreamSphere.Cast();
             }
         }
         else
