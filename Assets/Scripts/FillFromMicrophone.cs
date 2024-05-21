@@ -23,7 +23,7 @@ public class FillFromMicrophone : MonoBehaviour
     {
         if (sensitivitySlider == null) return;
 
-        sensitivitySlider.value = .7f;
+        sensitivitySlider.value = .3f;
         SetLoudnessSensibility(sensitivitySlider.value);
     }
 

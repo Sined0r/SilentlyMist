@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float value = 1;
-    public RectTransform valueRectTransform;
 
     public GameObject gameplayUI;
     public GameObject gameOverScreen;
@@ -15,7 +14,6 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         _maxValue = value;
-        DrawHealthBar();
     }
 
     public void DealDamage(float damage)
@@ -27,18 +25,13 @@ public class PlayerHealth : MonoBehaviour
             PlayerIsDead();
         }
 
-        DrawHealthBar();
     }
 
     private void PlayerIsDead()
     {
+        Time.timeScale = 0f;
         gameplayUI.SetActive(false);
         gameOverScreen.SetActive(true);
-        GetComponent<FirstPersonMovement>().enabled = false;
     }
 
-    private void DrawHealthBar()
-    {
-        valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
-    }
 }

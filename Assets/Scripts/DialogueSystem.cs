@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -43,6 +44,14 @@ public class DialogueSystem : MonoBehaviour
         {
             StopAllCoroutines();
             dialogueText.text = lines[index];
+        }
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SkipText();
         }
     }
 
