@@ -13,10 +13,10 @@ public class ScreamSphere : MonoBehaviour
         foreach (RaycastHit hit in hits)
         {
 
-            if (hit.rigidbody.TryGetComponent(out HearingEnemy hearingEnemy))
+            if (hit.collider.TryGetComponent(out HearingEnemy hearingEnemy))
             {
                 hearingEnemy.NoticePlayer();
-                Debug.Log('+');
+                /*Debug.Log('+');*/
             }
         }
     }

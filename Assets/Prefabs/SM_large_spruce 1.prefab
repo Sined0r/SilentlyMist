@@ -116,7 +116,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 0
-  m_CookingOptions: 30
+  m_CookingOptions: -1
   m_Mesh: {fileID: -387298209978578080, guid: cf97f17ca66823e448521db69dc5afc8, type: 3}
 --- !u!136 &5661032167109037945
 CapsuleCollider:
@@ -137,7 +137,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.58
-  m_Height: 8.59
+  m_Radius: 0.94
+  m_Height: 10.99
   m_Direction: 1
-  m_Center: {x: 0, y: 2.52, z: 0}
+  m_Center: {x: 0, y: 4.86, z: 0}

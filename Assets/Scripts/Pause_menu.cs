@@ -33,6 +33,7 @@ public class Pause_menu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         _audio.Play();
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Pause()
@@ -41,6 +42,7 @@ public class Pause_menu : MonoBehaviour
         Time.timeScale = 0f;
         GameIsPaused = true;
         _audio.Pause();
+        Cursor.lockState = CursorLockMode.None;
     }
 }
 
