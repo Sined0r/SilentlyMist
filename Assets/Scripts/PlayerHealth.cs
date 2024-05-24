@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
         Time.timeScale = 0f;
         gameplayUI.SetActive(false);
         gameOverScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
 }

@@ -38,7 +38,7 @@ public class HearingEnemy : MonoBehaviour
     {
         if (_isPlayerNoticed)
         {
-            if (_navMeshAgent.remainingDistance <= _navMeshAgent.stoppingDistance)
+            if (_navMeshAgent.remainingDistance <= 5)
             {
                 _playerHealth.DealDamage(damage * Time.deltaTime);
             }

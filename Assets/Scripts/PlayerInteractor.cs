@@ -1,6 +1,8 @@
-﻿using Unity.VisualScripting;
+﻿using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerInteractor : MonoBehaviour
@@ -35,7 +37,7 @@ public class PlayerInteractor : MonoBehaviour
                 if (hit.collider.GetComponent<Note>())
                 {
                     note.SetActive(true);
-                    textNote.GetComponent<Text>().text = hit.collider.GetComponent<Note>().textNote;
+                    textNote.GetComponent<TextMeshProUGUI>().text = hit.collider.GetComponent<Note>().textNote;
                 }
                 if (hit.collider.GetComponent<Gribnik>())
                 {
@@ -46,7 +48,7 @@ public class PlayerInteractor : MonoBehaviour
                     }
                     if (_all == true)
                     {
-
+                        ToDialoge();
                     }
                 }
             }
@@ -62,6 +64,11 @@ public class PlayerInteractor : MonoBehaviour
             note.SetActive(false);
             textNote.GetComponent<Text>().text = "";
         }
+    }
+
+    public void ToDialoge()
+    {
+        SceneManager.LoadScene(2);
     }
 
     private void Awake()
